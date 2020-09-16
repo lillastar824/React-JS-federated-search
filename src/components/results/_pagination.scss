@@ -1,0 +1,80 @@
+/**
+ * pagination.scss
+ * Define pagination styles.
+ *
+ * @copyright Copyright (c) 2017-2019 Palantir.net
+ */
+.search-pager {
+}
+
+.search-pager__items {
+  @extend %list--simple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rhythm(2);
+  margin: rhythm(3) 0;
+
+  @include breakpoint($bp0) {
+    justify-content: flex-start;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Pager list item styles
+.search-pager__item {
+  display: inline-block;
+  cursor: pointer;
+
+  @include breakpoint($bp0) {
+    margin-right: rhythm(.35);
+  }
+
+  @include breakpoint($bp2) {
+    margin-right: rhythm(.25);
+  }
+
+  &.is-active .search-pager__item-link {
+    font-weight: bold;
+  }
+
+  &.not-active .search-pager__item-link {
+    display: none;
+
+    @include breakpoint($bp0) {
+      display: inline-block;
+    }
+  }
+}
+
+// Link styles
+.search-pager__item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  text-align: center;
+  padding: rhythm(.25);
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    svg {
+      fill: $c-primary-dark;
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  svg {
+    height: 1.3em;
+    fill: $black;
+    display: block;
+    border-bottom: 1px solid transparent;
+
+    @include breakpoint($bp0) {
+      height: 1em;
+    }
+  }
+}

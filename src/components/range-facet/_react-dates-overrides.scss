@@ -1,0 +1,126 @@
+/**
+  Overrides default styles from react-dates component
+  See https://github.com/airbnb/react-dates#without-webpack
+  Default styles in _react-dates.scss
+ */
+.PresetDateRangePicker_button {
+  border: 2px solid lighten($c-primary-light, 25%);
+  color: lighten($c-primary-light, 25%);
+}
+.PresetDateRangePicker_button__selected {
+  color: $white;
+  background: lighten($c-primary-light, 25%);
+}
+.DayPickerKeyboardShortcuts_show__bottomRight {
+  border-top: 26px solid transparent;
+  border-right: 33px solid $c-primary-light;
+}
+.DayPickerKeyboardShortcuts_show__bottomRight:hover {
+  border-right: 33px solid darken($c-primary-light, 15%);
+}
+.DayPickerKeyboardShortcuts_show__topRight {
+  border-bottom: 26px solid transparent;
+  border-right: 33px solid $c-primary-light;
+}
+.DayPickerKeyboardShortcuts_show__topRight:hover {
+  border-right: 33px solid darken($c-primary-light, 15%);
+}
+.DayPickerKeyboardShortcuts_show__topLeft {
+  border-bottom: 26px solid transparent;
+  border-left: 33px solid lighten($c-primary-light, 25%);
+}
+.DayPickerKeyboardShortcuts_show__topLeft:hover {
+  border-left: 33px solid $c-primary;
+}
+.CalendarDay__selected_span {
+  background: lighten($c-primary-light, 45%);
+  border: 1px solid lighten($c-primary-light, 5%);
+  color: $c-primary-light;
+}
+.CalendarDay__selected_span:active,
+.CalendarDay__selected_span:hover {
+  background: $c-border-gray;
+  border: 1px solid $c-border-gray;
+  color: $white;
+}
+.CalendarDay__last_in_range {
+  border-right: lighten($c-primary-light, 25%);
+}
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: $c-primary-light;
+  border: 1px solid $c-primary-light;
+  color: $white;
+}
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:hover {
+  background: lighten($c-primary-light, 45%);
+  border: 1px solid lighten($c-primary-light, 5%);
+  color: $c-primary-light;
+}
+.CalendarDay__hovered_span:active {
+  background: lighten($c-primary-light, 45%);
+  border: 1px solid lighten($c-primary-light, 5%);
+  color: $c-primary-light;
+}
+.DateInput_input__focused {
+  border-bottom: 2px solid $c-primary-light;
+}
+
+.CalendarDay__highlighted_calendar {
+  background: $c-secondary-light;
+  color: $gray-medium;
+}
+.CalendarDay__highlighted_calendar:active,
+.CalendarDay__highlighted_calendar:hover {
+  background: $c-secondary;
+  color: $gray-medium;
+}
+
+.DateInput_input::placeholder {
+  color: $gray-medium;
+}
+
+// Override default layout.
+.DayPicker_weekHeader_li {
+  display: inline-block !important; // To override .search-accordion__group li
+}
+
+.DateRangePickerInput_clearDates_default:focus,
+.DateRangePickerInput_clearDates_default:hover {
+  border-radius: 0;
+}
+
+@media only screen and (max-width: 1350px) and (min-width: 901px)  {
+  .DateInput_input__small {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px 4px 6px;
+  }
+
+  .DateInput__small {
+    width: 70px;
+  }
+}
+
+.KeyboardShortcutRow_keyContainer {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: right;
+  margin-right: 6px;
+}
+
+.KeyboardShortcutRow_key {
+  font-family: monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: $c-bg-gray;
+  padding: 2px 6px;
+}
+
+.KeyboardShortcutRow_action {
+  display: inline;
+  word-break: break-word;
+  margin-left: 8px;
+}
